@@ -3,9 +3,15 @@
 const jwt = require('jsonwebtoken');
 
 module.exports = (req, res, next) => {
-  return jwt.verify(req.headers.auth, process.env.SECRET).then(valid => {
-    if(valid.id){
+  const token = req.headers.cookie.split('=')[1];
+  return jwt.verify(token, process.env.SECRET, (error, decoded)=> {
+    if(error) {
+      return res.json({
+        message: 'inside error',
+      });
+    }else{
+      req.id = decoded.id;
       next();
     }
-  }).catch(error => console.error(error));
+  });
 };

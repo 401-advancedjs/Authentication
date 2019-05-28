@@ -6,7 +6,7 @@
 ### Author: Student/Group Name
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
+* [submission PR](https://github.com/401-advancedjs/authentication/pull/1)
 * [travis](https://www.travis-ci.com/401-advancedjs/Authentication)
 
 #### Documentation
