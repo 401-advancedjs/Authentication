@@ -7,9 +7,7 @@
 
 ### Links and Resources
 * [submission PR](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
+* [travis](https://www.travis-ci.com/401-advancedjs/Authentication)
 
 #### Documentation
 * [api docs](http://xyz.com) (API servers)
@@ -17,7 +15,14 @@
 * [styleguide](http://xyz.com) (React assignments)
 
 ### Modules
-#### `modulename.js`
+#### `middlware.js`
+#### `router.js`
+#### `users-model.js`
+#### `404.js`
+#### `error.js`
+#### `books.js`
+#### `app.js`
+
 ##### Exported Values and Methods
 
 ###### `foo(thing) -> string`
@@ -33,9 +38,9 @@ Usage Notes or examples
 
 #### Running the app
 * `npm start`
-* Endpoint: `/foo/bar/`
+* Endpoint: `/signup`
   * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
+* Endpoint: `/signin`
   * Returns a JSON object with xyz in it.
   
 #### Tests
@@ -44,4 +49,4 @@ Usage Notes or examples
 * What assertions need to be / should be made?
 
 #### UML
-Link to an image of the UML for your application and response to events
+![Authentication UML](auth_img.jpg) 

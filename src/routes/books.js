@@ -2,7 +2,9 @@
 
 const express = require('express');
 const router = express.Router();
+const verifyToken = require('./middleware.js');
 
+router.use(verifyToken);
 router.get('/books', handleGetAll);
 router.get('/books/:id', handleGetOne);
 
