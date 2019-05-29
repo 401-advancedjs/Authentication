@@ -15,27 +15,45 @@
 * [styleguide](http://xyz.com) (React assignments)
 
 ### Modules
-#### `middlware.js`
-#### `router.js`
-#### `users-model.js`
-#### `404.js`
-#### `error.js`
-#### `books.js`
-#### `middleware.js`
-#### `app.js`
+#### `src/auth/middlware.js`
 
-##### Exported Values and Methods
+Authenticates username and password
 
-###### `foo(thing) -> string`
-Usage Notes or examples
+#### `src/auth/router.js`
 
-###### `bar(array) -> array`
-Usage Notes or examples
+Express router for `/signin` and `/signup` routes
+
+#### `src/auth/users-model.js`
+
+Users mongoose schema.
+
+#### `src/middleware/404.js`
+
+Not found error handler.
+
+#### `src/middleware/error.js`
+
+Server error handler.
+
+#### `src/routes/books.js`
+
+Express router for `/books` and `/books/:id` routes.
+
+#### `src/routes/middleware.js`
+
+Verifies access token, `req.headers.cookie`.
+
+#### `src/app.js`
+
+Server application module to tie it all together.
+Exports object, `{ server, start }`
+
 
 ### Setup
 #### `.env` requirements
 * `PORT` - Port Number
 * `MONGODB_URI` - URL to the running mongo instance/db
+* `SECRET` - key for used for crypto algorithms
 
 #### Running the app
 * `npm start`
