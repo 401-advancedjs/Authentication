@@ -21,6 +21,7 @@
 #### `404.js`
 #### `error.js`
 #### `books.js`
+#### `middleware.js`
 #### `app.js`
 
 ##### Exported Values and Methods
@@ -39,9 +40,11 @@ Usage Notes or examples
 #### Running the app
 * `npm start`
 * Endpoint: `/signup`
-  * Returns a JSON object with abc in it.
+  * Returns a JSON object with a token in it representing the new account.
 * Endpoint: `/signin`
-  * Returns a JSON object with xyz in it.
+  * Returns a JSON object with  in it.
+* Endpoinrt: `books`
+  * Returns a JSON object with the selected books in it.
   
 #### Tests
 * How do you run tests?

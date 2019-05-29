@@ -1,4 +1,8 @@
 'use strict';
+/**
+ * Express application
+ * @module
+ */
 
 // 3rd Party Resources
 const express = require('express');

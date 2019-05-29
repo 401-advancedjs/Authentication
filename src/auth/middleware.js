@@ -1,4 +1,8 @@
 'use strict';
+/**
+ * Authentication middleware
+ * @module 
+ */
 
 const User = require('./users-model.js');
 
@@ -21,6 +25,10 @@ module.exports = (req, res, next) => {
     return _authError();
   }
 
+  /**
+   * Takes in base64 string containing username:password and authenticates user
+   * @param {string} authString 
+   */
   function _authBasic(authString) {
     let base64Buffer = Buffer.from(authString,'base64'); // <Buffer 01 02...>
     let bufferString = base64Buffer.toString(); // john:mysecret
@@ -31,6 +39,10 @@ module.exports = (req, res, next) => {
       .then( user => _authenticate(user) );
   }
 
+  /**
+   * Generate token for user - adds username and token to request object
+   * @param {object} user 
+   */
   function _authenticate(user) {
     if ( user ) {
       req.user = user;
@@ -41,7 +53,9 @@ module.exports = (req, res, next) => {
       _authError();
     }
   }
-
+  /**
+   * Unauthorized invalid username/password handler
+   */
   function _authError() {
     next({status: 401, statusMessage: 'Unauthorized', message: 'Invalid User ID/Password'});
   }
