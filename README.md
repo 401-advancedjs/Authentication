@@ -1,9 +1,9 @@
 ![CF](http://i.imgur.com/7v5ASc8.png) LAB
 =================================================
 
-## Project Name
+## Authentication
 
-### Author: Student/Group Name
+### Author: Melissa Stock and Jagdeep Singh
 
 ### Links and Resources
 * [submission PR](https://github.com/401-advancedjs/authentication/pull/1)
@@ -42,14 +42,18 @@ Usage Notes or examples
 * Endpoint: `/signup`
   * Returns a JSON object with a token in it representing the new account.
 * Endpoint: `/signin`
-  * Returns a JSON object with  in it.
+  * Returns a JSON object with success message in it.
 * Endpoinrt: `books`
   * Returns a JSON object with the selected books in it.
   
 #### Tests
-* How do you run tests?
-* What assertions were made?
+* How do you run tests? `npm test`
+* What assertions were made? 
+  * Successfully creates new user
+  * Successfully logs in
+  * Successfully hits all middleware
 * What assertions need to be / should be made?
+  * No other assertions required
 
 #### UML
 ![Authentication UML](auth_img.jpg) 

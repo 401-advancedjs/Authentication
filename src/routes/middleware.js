@@ -17,7 +17,7 @@ module.exports = (req, res, next) => {
   return jwt.verify(token, process.env.SECRET, (error, decoded)=> {
     if(error) {
       return res.json({
-        message: 'inside error',
+        message: 'Please sign in',
       });
     }else{
       req.id = decoded.id;
